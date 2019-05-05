@@ -1,0 +1,48 @@
+urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
+urxvt*termName:         rxvt
+urxvt*scrollBar:        false
+urxvt*perl-lib:         /home/mantasgudynas/.config/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher,selection-to-clipboard,font-size,keyboard-select,url-select
+urxvt*urlLauncher:      brave-browser
+urxvt*url-launcher:     brave-browser
+urxvt*matcher.button:   1
+urxvt.iso14755:         false
+urxvt.iso14755_52:      false
+
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+URxvt.transparent:   true
+URxvt.tintColor:     white
+URxvt.shading:       2
+
+*.background:  #000000
+*.foreground:  #cccccc
+
+*.color0:      #000000
+*.color1:      #9e1828
+*.color2:      #45c143
+*.color3:      #d79921
+*.color4:      #223e71
+*.color5:      #963c59
+*.color6:      #418179
+*.color7:      #bebebe
+*.color8:      #666666
+*.color9:      #cf6171
+*.color10:     #c5f779
+*.color11:     #fabd2f
+*.color12:     #4186be
+*.color13:     #cf9ebe
+*.color14:     #71bebe
+*.color15:     #ebdbb2
+
+URxvt.keysym.Control-F9: perl:keyboard-select:activate
+URxvt.keysym.Control-f: perl:keyboard-select:search
+URxvt.keyboard-select.clipboard: true
+URxvt.keysym.Control-u: perl:matcher:select
+
+URxvt.keysym.Control-Up:      \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:   \033[1;5C
