@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+CURRENT=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).num')
+ALL=$(i3-msg -t get_workspaces | jq -r '.[] | .num')
+
+if [ "$CURRENT" -gt 10 ]; then
+  LARGE=$(echo "$ALL" | awk '{if ($1 > 10) print $1}' | sort -r | head -n 1)
+  NEXT_LARGE=$((LARGE+1))  
+  i3-msg workspace "$NEXT_LARGE"
+  echo "adding large"
+else 
+  SMALL=$(echo "$ALL" | awk '{if ($1 <= 10) print $1}' | sort -r | head -n 1)
+  echo $SMALL
+  NEXT_SMALL=$((SMALL+1))
+  echo "adding small"
+  i3-msg workspace "$NEXT_SMALL"
+fi
